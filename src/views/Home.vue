@@ -216,7 +216,7 @@ export default {
       var todoBox = document.getElementById(scrollId);
       setTimeout( () => {
          todoBox.scrollTop = todoBox.scrollHeight;
-         document.getElementById(textareaId).focus();
+         //document.getElementById(textareaId).focus();
       }, 500)
     };
 

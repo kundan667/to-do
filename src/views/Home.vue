@@ -5,7 +5,7 @@
       <h1>ToDo App</h1>
     </div>
     <div class="cards todo">
-      <div class="form-floating col-6">
+      <div class="form-floating col-12 col-md-6">
         <input v-model="user" type="text" class="form-control" id="floatingInput" placeholder="Search by name or e-mail">
       </div>
       <div class="card-list-box d-flex scroll-bar">
@@ -283,7 +283,8 @@ export default {
   max-height: calc(100vh - (7rem + 10px + 2rem));
   min-height: max-content;
   background: #ebebeb;
-  overflow: auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 .scroll-bar::-webkit-scrollbar {

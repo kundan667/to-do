@@ -4,13 +4,19 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build",
+    "install-client": "npm install",
+    "heroku-postbuild": "npm run install-client",
+    "start": "npm run serve"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "register-service-worker": "^1.7.1",
     "vue": "^3.0.0",
+    "vue-loader": "^15.9.6",
     "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "vuex": "^4.0.0-0",
+    "vuex-persistedstate": "^4.0.0-beta.3"
   },
   "devDependencies": {
     "@vue/cli-plugin-pwa": "~4.5.0",

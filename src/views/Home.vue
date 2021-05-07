@@ -169,6 +169,7 @@ export default {
       });
       data.userTodos = [...todoByName];
     });
+    
     let changeStatus = (type, uId, tId) => {
       let todos = [...data.userTodos];
       todos.find((item) => {

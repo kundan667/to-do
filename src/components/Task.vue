@@ -8,9 +8,9 @@
                 <div>
                     <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b>...</b></a>
                     <div class="dropdown-menu" style="">
-                        <a v-if="!completed" class="dropdown-item" href="#" v-on:click="$emit('statusClick',$event.target.innerText)">Completed</a>
-                        <a v-else class="dropdown-item" href="#" v-on:click="$emit('statusClick',$event.target.innerText)">Pending</a>
-                        <a class="dropdown-item" href="#" v-on:click="$emit('statusClick',$event.target.innerText)">Delete</a>
+                        <a v-if="!completed" class="dropdown-item" href="#" @click.prevent="$emit('statusClick',$event.target.innerText)">Completed</a>
+                        <a v-else class="dropdown-item" href="#" @click.prevent="$emit('statusClick',$event.target.innerText)">Pending</a>
+                        <a class="dropdown-item" href="#" @click.prevent="$emit('statusClick',$event.target.innerText)">Delete</a>
                     </div>
                 </div>
             </div>

@@ -161,8 +161,8 @@ export default {
       let val = newValue.toLowerCase();
       let todoByName = todosCopy.filter((item) => {
         if (
-          item.name.toLowerCase().search(newValue) != -1 ||
-          item.email.toLowerCase().search(newValue) != -1
+          item.name.toLowerCase().search(val) != -1 ||
+          item.email.toLowerCase().search(val) != -1
         ) {
           return item;
         }

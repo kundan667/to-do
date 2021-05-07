@@ -216,7 +216,7 @@ export default {
       var todoBox = document.getElementById(scrollId);
       setTimeout( () => {
          todoBox.scrollTop = todoBox.scrollHeight;
-         //document.getElementById(textareaId).focus();
+         document.getElementById(textareaId).focus();
       }, 500)
     };
 
@@ -286,7 +286,7 @@ export default {
   font-size: 0.6rem;
 }
 .todo .todo-list-box {
-  height: calc(100vh - (7rem + 10px + 2rem));
+  max-height: calc(100vh - (7rem + 10px + 2rem));
   min-height: 0;
   background: #ebebeb;
   overflow-y: scroll;

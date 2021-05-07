@@ -259,7 +259,12 @@ export default {
   background: #ebebeb;
 }
 .card-list-box {
-  overflow: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  user-select: none;
+  /* white-space: nowrap; */
+  -webkit-overflow-scrolling: initial;
+  -webkit-transform: translateZ(0);
 }
 .card-list {
   margin: 0 0.4em;
@@ -281,11 +286,17 @@ export default {
   font-size: 0.6rem;
 }
 .todo .todo-list-box {
-  max-height: calc(100vh - (7rem + 10px + 2rem));
-  min-height: max-content;
+  height: calc(100vh - (7rem + 10px + 2rem));
+  min-height: 0;
   background: #ebebeb;
-  overflow: scroll;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-overflow-scrolling: initial;
+  -webkit-transform: translateZ(0);
 }
 
 .scroll-bar::-webkit-scrollbar {

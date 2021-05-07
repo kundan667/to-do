@@ -240,6 +240,7 @@ export default {
   background-position: center bottom;
   background-size: cover;
   background-attachment: fixed;
+  width: 100%;
 }
 .banner h1{
   color: #e91e63;

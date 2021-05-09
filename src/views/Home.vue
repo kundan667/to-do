@@ -115,6 +115,7 @@ export default {
     });
     let user = ref("");
 
+    // Populate the State if there is no TODO data
     if (Object.keys(data.userTodos).length === 0) {
       onBeforeMount(async () => {
         await axios
@@ -141,6 +142,7 @@ export default {
       });
     }
 
+    // Sorting of TODOs
     let sortTodos = (userId, isCompleted) => {
       let todoById = [];
       data.userTodosCopy.find((item) => {
@@ -156,6 +158,7 @@ export default {
       data.userTodos[index].todos = todoById;
     };
 
+    // Watch for the search input and filter the TODOs
     watch(user, (newValue) => {
       let todosCopy = [...data.userTodosCopy];
       let val = newValue.toLowerCase();
@@ -170,6 +173,7 @@ export default {
       data.userTodos = [...todoByName];
     });
     
+    // To changes the status to TODO
     let changeStatus = (type, uId, tId) => {
       let todos = [...data.userTodos];
       todos.find((item) => {
@@ -189,6 +193,7 @@ export default {
       store.commit("SET_TODOS_COPY", data.todos);
     };
 
+    // Save the TODO to state
     let saveTodo = (id) => {
       if( document.getElementById(id).value.length === 0 ) return
       let userTodos = [...data.userTodos];
@@ -212,6 +217,8 @@ export default {
       store.commit("SET_TODOS", data.todos);
       store.commit("SET_TODOS_COPY", data.todos);
     };
+
+    // Scroll the todo box to bottom if one clicks to add TODO
     let scrollCardsToBottom = (scrollId, textareaId) => {
       var todoBox = document.getElementById(scrollId);
       setTimeout( () => {

@@ -25,5 +25,7 @@ export default createStore({
   },
   modules: {
   },
+
+  // Save to the browser's memory (local storage)
   plugins: [createPersistedState()],
 })
